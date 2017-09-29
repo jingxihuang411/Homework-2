@@ -44,6 +44,8 @@ contract('BettingTestOracleSet', function(accounts) {
 			return instance.chooseOracle.call(args._oracle, {from: args._owner});
 		})
 		.then(function(result) {
+			console.log(result);
+			console.log(args._oracle);
 			assert.equal(result, args._oracle, "Oracle address and test " +
 				"values do not match");
 		});
